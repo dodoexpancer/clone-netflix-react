@@ -3,15 +3,21 @@ const PT_BR = "pt-BR"
 
 
 const categories = [{
-    name: "trending", title: "Em Alta", path: `/trending/all/week?api_key=${API_KEY}&language=${PT_BR}`,
+    name: "trending", title: "Em Alta", path: `/trending/all/week?api_key=${API_KEY}&language=${PT_BR}`, isLarge: true
 }, {
-    name: "netflixOriginals", title: "Netflix Originais", path: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
+    name: "netflixOriginals",
+    title: "Netflix Originais",
+    path: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
+    isLarge: false
 }, {
-    name: "topRated", title: "Populares", path: `/movie/top_rated?api_key=${API_KEY}&language=${PT_BR}`,
+    name: "topRated", title: "Populares", path: `/movie/top_rated?api_key=${API_KEY}&language=${PT_BR}`, isLarge: false
 }, {
-    name: "comedy", title: "Comedia", path: `/discover/tv?api_key=${API_KEY}&with_genres=35`,
+    name: "comedy", title: "Comedia", path: `/discover/tv?api_key=${API_KEY}&with_genres=35`, isLarge: false
 }, {
-    name: "documentaries", title: "Documentarios", path: `/discover/tv?api_key=${API_KEY}&with_genres=99`,
+    name: "documentaries",
+    title: "Documentarios",
+    path: `/discover/tv?api_key=${API_KEY}&with_genres=99`,
+    isLarge: false
 }]
 
 export const getMovies = async (path) => {
